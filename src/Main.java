@@ -1,5 +1,10 @@
 import br.com.jr.screenmatch.calculo.Calculadora;
+import br.com.jr.screenmatch.calculo.FiltroRecomendacao;
+import br.com.jr.screenmatch.modelos.Episodio;
 import br.com.jr.screenmatch.modelos.Filme;
+import br.com.jr.screenmatch.modelos.Serie;
+
+import java.io.Serial;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,6 +15,8 @@ public class Main {
 
         filme2.setNome("One Piece");
         filme2.setDuracaoEmMinutos(180);
+        filme2.setAnoDeLancamento(1999);
+        filme2.setDiretor("Eichiro Oda");
 
         meuFilme.setNome("Homem Aranha");
         meuFilme.setAnoDeLancamento(2012);
@@ -20,10 +27,24 @@ public class Main {
         meuFilme.pegaMedia();
 
 
+        filme2.exibeFichaTecnica();
+
         calculadora.inclui(filme2);
         calculadora.inclui(meuFilme);
         System.out.println(calculadora.getTempoTotal());
 
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        Serie serie = new Serie();
+        serie.setNome("One Piece");
+
+        episodio.setNumero(1);
+        episodio.setSerie(serie);
+        episodio.setTotalViews(300);
+        filtro.filtra(episodio);
         }
 
     }

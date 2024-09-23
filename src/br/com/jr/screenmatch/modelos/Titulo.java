@@ -13,7 +13,12 @@ public class Titulo {
         System.out.println("Nome: " + nome);
         System.out.println("Ano de Lançamento " + anoDeLancamento);
         System.out.println("Duração " + duracaoEmMinutos + " Minutos");
-        System.out.println("Quantidade de avaliações: " + totalDeAvaliacao);
+        if(totalDeAvaliacao == 0){
+            System.out.println("Ainda não existe avaliações para esse título");
+        }else{
+            System.out.println("Quantidade de avaliações: " + totalDeAvaliacao);
+        }
+
     }
 
     public void avalia(double nota){
@@ -42,6 +47,11 @@ public class Titulo {
     }
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
+        if(duracaoEmMinutos >5000){
+            System.out.printf("Limite estourado de minutos");
+        }else{
+            this.duracaoEmMinutos = duracaoEmMinutos;
+        }
+
     }
 }
