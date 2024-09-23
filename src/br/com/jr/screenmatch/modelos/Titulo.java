@@ -12,7 +12,7 @@ public class Titulo {
     public void exibeFichaTecnica(){
         System.out.println("Nome: " + nome);
         System.out.println("Ano de Lançamento " + anoDeLancamento);
-        System.out.println("Duração " + duracaoEmMinutos + "Minutos");
+        System.out.println("Duração " + duracaoEmMinutos + " Minutos");
         System.out.println("Quantidade de avaliações: " + totalDeAvaliacao);
     }
 

@@ -1,6 +1,6 @@
 package br.com.jr.screenmatch.modelos;
 
-public class Series extends Titulo{
+public class Serie extends Titulo{
 
     private int temporadas;
     private int episodiosPorTemporada;
