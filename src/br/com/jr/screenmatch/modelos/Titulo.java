@@ -38,8 +38,13 @@ public class Titulo {
         return duracaoEmMinutos;
     }
 
+
     public void setNome(String nome){
         this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public void setAnoDeLancamento(int anoDeLancamento) {

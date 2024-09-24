@@ -4,7 +4,10 @@ import br.com.jr.screenmatch.modelos.Episodio;
 import br.com.jr.screenmatch.modelos.Filme;
 import br.com.jr.screenmatch.modelos.Serie;
 
+import java.io.File;
 import java.io.Serial;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +48,24 @@ public class Main {
         episodio.setSerie(serie);
         episodio.setTotalViews(300);
         filtro.filtra(episodio);
+
+
+        // new
+
+        ArrayList<Filme> listaFilme = new ArrayList<>();
+
+        listaFilme.add(meuFilme);
+        listaFilme.add(filme2);
+
+        System.out.println(listaFilme.size());
+
+        System.out.println(listaFilme.get(0).getNome());
+
+        System.out.println(listaFilme);
+
+        for (Filme filme : listaFilme) {
+            System.out.println(filme.getNome());
+        }
         }
 
     }
