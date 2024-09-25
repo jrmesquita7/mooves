@@ -1,12 +1,12 @@
+package br.com.jr.screenmatch.principal;
+
 import br.com.jr.screenmatch.calculo.Calculadora;
 import br.com.jr.screenmatch.calculo.FiltroRecomendacao;
 import br.com.jr.screenmatch.modelos.Episodio;
 import br.com.jr.screenmatch.modelos.Filme;
 import br.com.jr.screenmatch.modelos.Serie;
+import br.com.jr.screenmatch.modelos.Titulo;
 
-import java.io.File;
-import java.io.Serial;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
@@ -46,7 +46,7 @@ public class Main {
 
         // new
 
-        ArrayList<Filme> listaFilme = new ArrayList<>();
+        ArrayList<Titulo> listaFilme = new ArrayList<>();
 
         listaFilme.add(meuFilme);
         listaFilme.add(filme2);
@@ -55,10 +55,20 @@ public class Main {
 
         System.out.println(listaFilme.get(0).getNome());
 
-        // Linha removida
+        Serie ssk = new Serie("Shingeki no Kiojin", 2003);
 
-        for (Filme filme : listaFilme) {
-            System.out.println(filme.getNome());
+        listaFilme.add(ssk);
+
+        for (Titulo titulo : listaFilme) {
+            System.out.println(titulo.getNome());
+
+            Filme filme = (Filme) titulo;
+            try {
+
+            }
+
+            System.out.println("Classificação: " + filme.getClassificacao());
+
         }
         }
 
