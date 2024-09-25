@@ -55,7 +55,7 @@ public class Main {
 
         System.out.println(listaFilme.get(0).getNome());
 
-        System.out.println(listaFilme.toString());
+        // Linha removida
 
         for (Filme filme : listaFilme) {
             System.out.println(filme.getNome());
