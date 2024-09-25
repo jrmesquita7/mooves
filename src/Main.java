@@ -11,18 +11,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        Filme filme2 = new Filme();
+        Filme meuFilme = new Filme("Homem Aranha", 2001);
+        Filme filme2 = new Filme("One Piece", 1999);
         Calculadora calculadora = new Calculadora();
 
-
-        filme2.setNome("One Piece");
         filme2.setDuracaoEmMinutos(180);
-        filme2.setAnoDeLancamento(1999);
-        filme2.setDiretor("Eichiro Oda");
 
-        meuFilme.setNome("Homem Aranha");
-        meuFilme.setAnoDeLancamento(2012);
+
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.avalia(8.5);
         meuFilme.avalia(8);
@@ -31,7 +26,6 @@ public class Main {
 
 
         filme2.exibeFichaTecnica();
-
         calculadora.inclui(filme2);
         calculadora.inclui(meuFilme);
         System.out.println(calculadora.getTempoTotal());
@@ -41,8 +35,8 @@ public class Main {
         filtro.filtra(meuFilme);
 
         Episodio episodio = new Episodio();
-        Serie serie = new Serie();
-        serie.setNome("One Piece");
+        Serie serie = new Serie("One Piece", 1999);
+
 
         episodio.setNumero(1);
         episodio.setSerie(serie);
@@ -61,7 +55,7 @@ public class Main {
 
         System.out.println(listaFilme.get(0).getNome());
 
-        System.out.println(listaFilme);
+        System.out.println(listaFilme.toString());
 
         for (Filme filme : listaFilme) {
             System.out.println(filme.getNome());
