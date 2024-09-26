@@ -1,6 +1,3 @@
-Claro! Aqui está um exemplo de `README.md` para um projeto Java com classes de filmes e séries, agora em português:
-
----
 
 # Projeto Biblioteca de Mídia em Java
 
