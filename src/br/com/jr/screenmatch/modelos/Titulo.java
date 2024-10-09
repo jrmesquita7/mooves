@@ -1,6 +1,9 @@
 package br.com.jr.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo {
+
 
     private String nome;
     private int anoDeLancamento;
@@ -12,6 +15,12 @@ public class Titulo {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb){
+        this.nome = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
     }
 
     public void exibeFichaTecnica(){
@@ -63,5 +72,14 @@ public class Titulo {
             this.duracaoEmMinutos = duracaoEmMinutos;
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo{" +
+                "nome='" + nome + '\'' +
+                ", anoDeLancamento=" + anoDeLancamento + '\'' +
+                ", duracao=" + duracaoEmMinutos +
+                '}';
     }
 }

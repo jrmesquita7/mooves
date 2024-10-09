@@ -62,12 +62,6 @@ public class Main {
         for (Titulo titulo : listaFilme) {
             System.out.println(titulo.getNome());
 
-            Filme filme = (Filme) titulo;
-            try {
-
-            }
-
-            System.out.println("Classificação: " + filme.getClassificacao());
 
         }
         }
