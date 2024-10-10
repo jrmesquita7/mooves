@@ -1,6 +1,6 @@
 package br.com.jr.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
+import br.com.jr.screenmatch.excecao.ErroDeConversaoException;
 
 public class Titulo {
 
@@ -19,6 +19,10 @@ public class Titulo {
 
     public Titulo(TituloOmdb meuTituloOmdb){
         this.nome = meuTituloOmdb.title();
+
+        if (meuTituloOmdb.year().length() > 4){
+            throw new ErroDeConversaoException("Não consegui converter o ano");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
     }
